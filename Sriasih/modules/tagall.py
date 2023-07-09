@@ -6,9 +6,14 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 
-from geezram import telethn as client
+from Sriasih import telethn as client
 
 spam_chats = []
+__MODULE__ = "Tagall"
+__HELP__ = """/tagall - tag all A User in group
+/all & @all - to mention
+/cancel - buat matiin tag all
+"""
 
 
 @client.on(events.NewMessage(pattern="^/tagall|@all|/all ?(.*)"))
@@ -109,14 +114,5 @@ async def cancel_spam(event):
         return await event.respond("__Stopped Mention.__")
 
 
-__mod_name__ = "Tag all"
-__help__ = """
-──「 Mention all func 」──
 
-geezram Can Be a Mention Bot for your group.
-
-Only admins can tag all.  here is a list of commands
-
-❂ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
-❂ /cancel for canceling the mention-all.
 """
