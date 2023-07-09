@@ -31,7 +31,7 @@ ARQ_API_URL = environ.get("ARQ_API_URL", None)
 ARQ_API_KEY = environ.get("ARQ_API_KEY", None)
 RSS_DELAY = int(environ.get("RSS_DELAY", None))
 STRING_SESSION = environ.get("STRING_SESSION", "BQDEMaMAl8R2HQ7gk5tpcJzV4j797Krum0D7eKfCjcTJa7VcCcVJ-sHe8p9yx-TBvUk3lB6t7d7sqs_cQClR71ounj_xqYMjlRCBtjOzqYn3wnoaKTMPQLUnwkU08G8y-ik55pFt8rlEU9U9RkJHY2k0qIo_1dfxUsjVXgwxUnmQOd1bcU4hIYVQIpcsnYPtqxsLo_Ocsyj9MXTaVpcPKRzoRxsl_Q7Sg425ApxFuAPDgAWxvUHLQ2yQHvgWQfIL12OV62fsYci9xybPsTyzKrIyer37NtBCpYo-km7tZucwZdis8AB5rDa5qT1G1uSZxE3skVMuwlaKDBfy06QpoLhaX-JwuQAAAABmxjX7AA")
-BLACKLIST_CHAT = environ.get("BLACKLIST_CHAT")
+BLACKLIST_CHAT = environ.get("BLACKLIST_CHAT" None)
 UPSTREAM_REPO = environ.get(
     "UPSTREAM_REPO", ""
 )
