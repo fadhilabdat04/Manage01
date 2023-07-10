@@ -24,6 +24,7 @@ __HELP__ = """/filters To Get All The Filters In The Chat.
 You can use markdown or html to save text too.
 
 Checkout /markdownhelp to know more about formattings and other syntax.
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
