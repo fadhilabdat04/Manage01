@@ -82,22 +82,22 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands", callback_data="bot_commands"
+                text="Help", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo",
-                url="https://github.com/",
+                text="Jajanan Telegram",
+                url="https://t.me/SiArab_Store",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats",
+                text="ARAB ROBOT Stats",
                 callback_data="stats_callback",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Masukin saya ke group",
+                text="Tambahkan Saya Menjadi Di GC Ampas-mu",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -105,9 +105,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Yooo! Saya {BOT_NAME}. saya bisa bantu anda manage "
-    + "group anda, semua fitur biasa aja, kaya yg laen "
-    + "masukin ke group."
+    f"Yooo Nge! Saya {BOT_NAME}. Gua bot Music + Manage "
+    + "Semua fitur biasa aja, kaya yg laen "
 )
 
 
@@ -115,17 +114,17 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Bantuan",
+                text="Help",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo",
-                url="https://github.com/",
+                text="Jajanan Telegram",
+                url="https://t.me/SiArab_Store",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats",
+                text="ARAB ROBOT Stats",
                 callback_data="stats_callback",
             ),
         ],
@@ -137,7 +136,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://telegra.ph//file/5129b55895312901edf09.jpg",
+            photo="https://telegra.ph//file/8fffe9f061a0bd1fe1c3f.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -162,7 +161,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://telegra.ph//file/5129b55895312901edf09.jpg",
+            photo="https://telegra.ph//file/8fffe9f061a0bd1fe1c3f.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -227,7 +226,7 @@ async def help_parser(name, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
         """Yooo {first_name}, Nama saya {bot_name}.
-group management bot, udah langsung klik button aja
+Music Plus Manage Bot , udah langsung klik button di bawah aja/nBy: @Arabnihnge
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -264,7 +263,7 @@ async def help_button(client, query):
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
 yoo {query.from_user.first_name}, saya {BOT_NAME}.
-cuma grup management biasa aja, langsung aja clik buttonnya .
+Music Plus Manage Bot , udah langsung klik button di bawah aja/nBy: @Arabnihnge
 
 General command are:
  - /start: Start the bot
