@@ -12,7 +12,7 @@ __HELP__ = """
 /weebify - To weebify a message.
 /wish - To get succession rate! (Just for fun-.-)
 /slap - To slap someone.
-
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
