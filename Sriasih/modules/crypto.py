@@ -10,6 +10,7 @@ __MODULE__ = "Crypto"
 __HELP__ = """
 /crypto [currency]
         Get Real Time value from currency given.
+        ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
