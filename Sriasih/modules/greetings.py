@@ -67,6 +67,7 @@ containing rules of your groups whenever a user
 sends /rules, he'll get the message
 
 Checkout /markdownhelp to know more about formattings and other syntax.
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
