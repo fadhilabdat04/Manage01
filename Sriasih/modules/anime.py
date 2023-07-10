@@ -38,6 +38,7 @@ __HELP__ = """
 /aquote - Get Random Anime Quote.
 /aquote anime- Get Anime Quote From An Anime.
 /cquote character - Get Quote From A Character.
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
