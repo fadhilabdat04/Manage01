@@ -41,7 +41,8 @@ __HELP__ = """/ban - Ban A User
 /tmute - Mute A User For Specific Time
 /unmute - Unmute A User
 /ban_ghosts - Ban Deleted Accounts
-/report | @admins | @admin - Report A Message To Admins."""
+/report | @admins | @admin - Report A Message To Admins.
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™."""
 
 
 async def member_permissions(chat_id: int, user_id: int):
