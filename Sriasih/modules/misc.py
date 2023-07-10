@@ -63,6 +63,7 @@ __HELP__ = """
     Backup database
 
 #RTFM - Tell noobs to read the manual
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 ASQ_LOCK = Lock()
