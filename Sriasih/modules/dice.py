@@ -7,6 +7,7 @@ __MODULE__ = "Dice"
 __HELP__ = """
 /dice
     Roll a dice.
+    ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
