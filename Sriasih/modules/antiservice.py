@@ -13,6 +13,7 @@ __HELP__ = """
 Plugin to delete service messages in a chat!
 
 /antiservice [enable|disable]
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
