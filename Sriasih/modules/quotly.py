@@ -14,6 +14,7 @@ __HELP__ = """
 /q r - to quote a message with it's reply
 
 Use .q to quote using userbot
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 
