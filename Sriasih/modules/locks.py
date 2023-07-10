@@ -21,6 +21,7 @@ You can only pass the "all" parameter with /lock, not with /unlock
 
 Example:
     /lock all
+    ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™
 """
 
 incorrect_parameters = "Incorrect Parameters, Check Locks Section In Help."
