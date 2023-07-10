@@ -9,7 +9,8 @@ from Sriasih.utils.filter_groups import chatbot_group
 
 __MODULE__ = "ChatBot"
 __HELP__ = """
-/chatbot [ENABLE|DISABLE] To Enable Or Disable ChatBot In Your Chat."""
+/chatbot [ENABLE|DISABLE] To Enable Or Disable ChatBot In Your Chat.
+ᴧꝛᴧʙ ꝛᴏʙᴏᴛ | @SiArab_Store ™"""
 
 active_chats_bot = []
 
