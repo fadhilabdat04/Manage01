@@ -86,7 +86,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Jajanan Telegram",
-                url="https://t.me/SiArab_Store",
+                url="https://t.me/Jasasiarab",
             ),
         ],
         [
@@ -105,8 +105,16 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Yooo Nge! Saya {BOT_NAME}. Gua bot Music + Manage "
-    + "Semua fitur biasa aja, kaya yg laen "
+    f"""
+yoo {query.from_user.first_name}, saya {BOT_NAME} Bot Music Plus Manage Bot , Ga Ada yang spesial sama aja kek bot music laen, kalo mau donasi jangan lupa klik /donate otey
+
+General command are:
+ - /start: Start the bot
+ - /help: Give this message
+ - /donate: Donate for my 
+
+ Dev By: @Dhilnihng 
+ """
 )
 
 
@@ -118,8 +126,8 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Jajanan Telegram",
-                url="https://t.me/SiArab_Store",
+                text="Jasa SI ARAB",
+                url="https://t.me/Jasasiarab",
             ),
         ],
         [
@@ -136,7 +144,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://telegra.ph//file/8fffe9f061a0bd1fe1c3f.jpg",
+            photo="https://te.legra.ph/file/d2f257710e964cd8aa0db.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -161,7 +169,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://telegra.ph//file/8fffe9f061a0bd1fe1c3f.jpg",
+            photo="https://te.legra.ph/file/d2f257710e964cd8aa0db.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -225,8 +233,14 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Yooo {first_name}, Nama saya {bot_name}.
-Music Plus Manage Bot , udah langsung klik button di bawah aja/nBy: @Arabnihnge
+        """yoo {query.from_user.first_name}, saya {BOT_NAME} Bot Music Plus Manage Bot , Ga Ada yang spesial sama aja kek bot music laen, kalo mau donasi jangan lupa klik /donate otey
+
+General command are:
+ - /start: Start the bot
+ - /help: Give this message
+ - /donate: Donate for my 
+
+ Dev By: @Dhilnihnge
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -234,6 +248,43 @@ Music Plus Manage Bot , udah langsung klik button di bawah aja/nBy: @Arabnihnge
         keyboard,
     )
 
+
+@app.on_message(filters.command("donate"))
+async def donate(_, message):
+    f message.chat.type != enums.ChatType.PRIVATE:
+        return await message.reply_photo(
+            photo="https://telegra.ph/qris-08-08-3",
+            caption="Hai {first_name}, jika kamu merasa bot ini berguna kamu bisa melakukan donasi dengan scan QR menggunakan merchant yang support QRIS ya. Karena server bot ini menggunakan VPS dan tidaklah gratis. Terimakasih..\n\nDevs : @Dhilnihnge",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("Contact My Owner", url="t.me/Dhilnihnge")]]
+        )
+    if len(message.text.split()) > 1:
+        name = (message.text.split(None, 1)[1]).lower()
+        if name == "mkdwn_help":
+            await message.reply(
+                MARKDOWN, parse_mode="html", disable_web_page_preview=True
+            )
+        elif "_" in name:
+            module = name.split("_", 1)[1]
+            text = (
+                f"Here is the help for **{HELPABLE[module].__MODULE__}**:\n"
+                + HELPABLE[module].__HELP__
+            )
+            await message.reply(text, disable_web_page_preview=True)
+        elif name == "help":
+            text, keyb = await help_parser(message.from_user.first_name)
+            await message.reply(
+                text,
+                reply_markup=keyb,
+            )
+    else:
+        await message.reply_photo(
+            photo="",
+            caption=
+            reply_markup=home_keyboard_pm,
+        )
+    return
+   
 
 @app.on_callback_query(filters.regex("bot_commands"))
 async def commands_callbacc(_, CallbackQuery):
@@ -263,11 +314,12 @@ async def help_button(client, query):
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
 yoo {query.from_user.first_name}, saya {BOT_NAME}.
-Music Plus Manage Bot , udah langsung klik button di bawah aja/nBy: @Arabnihnge
-
+Music Plus Manage Bot , Ga Ada yang spesial sama aja kek bot music laen, kalo mau donasi jangan lupa klik /donate otey,  udah langsung klik button di bawah
+Dev By: @Dhilnihnge
 General command are:
  - /start: Start the bot
  - /help: Give this message
+ - /donate: Donate for my 
  """
     if mod_match:
         module = mod_match.group(1)
