@@ -18,26 +18,26 @@ if path.exists("config.env"):
     load_dotenv("config.env")
     
 BANNED_USER = environ.get("BANNED_USER" or None)  
-BOT_TOKEN = environ.get("BOT_TOKEN", None)
-API_ID = int(environ.get("API_ID", 12857763))
-API_HASH = environ.get("API_HASH", "7b71e8bca0d5e1c6d8383ae818d9ec8d")
-SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "1345594412").split()]
-LOG_GROUP_ID = int(environ.get("LOG_GROUP_ID", None))
-GBAN_LOG_GROUP_ID = int(environ.get("GBAN_LOG_GROUP_ID", None))
-MESSAGE_DUMP_CHAT = int(environ.get("MESSAGE_DUMP_CHAT", None))
+BOT_TOKEN = environ.get("BOT_TOKEN", "6515197149:AAEicDMoVIsS5KfEPpIorYEsLyuuxX55xkk")
+API_ID = int(environ.get("API_ID", 17896688))
+API_HASH = environ.get("API_HASH", "947327cf5ff0053a66bf7951f9db5658")
+SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "1948147616").split()]
+LOG_GROUP_ID = int(environ.get("LOG_GROUP_ID", "-1001795374467"))
+GBAN_LOG_GROUP_ID = int(environ.get("GBAN_LOG_GROUP_ID", "-1001571197486"))
+MESSAGE_DUMP_CHAT = int(environ.get("MESSAGE_DUMP_CHAT", "-1001795374467"))
 WELCOME_DELAY_KICK_SEC = int(environ.get("WELCOME_DELAY_KICK_SEC", None))
-MONGO_URL = environ.get("MONGO_URL", None)
+MONGO_URL = environ.get("MONGO_URL", "mongodb+srv://doadmin:N5qU43b167EgJH89@db-mongodb-sgp1-31724-8b5ccdd0.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb-sgp1-31724")
 ARQ_API_URL = environ.get("ARQ_API_URL", None)
 ARQ_API_KEY = environ.get("ARQ_API_KEY", None)
 RSS_DELAY = int(environ.get("RSS_DELAY", None))
-STRING_SESSION = environ.get("STRING_SESSION", "BQDEMaMABMVNx3qCzVjtpsIyjpv92GVSEWyxImXQQwU4J3c0tOiG4F_72zn-sR_PT5xKxCRg9UgVrvf6b0KShC0LNCtvgulFON7dzBHsgAe8GQtUHYn8Y5TISU1kExA9nrIXBOFXXgN6MhECe-mG0IFR07EX-AFPiJJ2D8XC1ZA4DxZXVwrVrGBWl48cnv6_ck-wrTPlueEGGutJG7zopNmiilNCBIzFkjllx49NYvdVMnLLq1zyrWNV6cvFuo6JngzQu3DEDefjrpWu29L78oujiNej-14oWR2WycfgEYVMi7HdVwpDUU_a1j_PxUNGC8BIjo0rMXgiP6okcqstbS855_G9_AAAAABpvaNsAA")
+STRING_SESSION = environ.get("STRING_SESSION", "AQAP-GEAvqHAJqYa8_-ds2nJ-lZvNjUh3mGGn-xivHpoZ74F_vPpz21FiPswwZ8WWjZemJv1XK0kIBky_Yx6t0sJDPwiebTvuTErZU6tVk8n01TZudW2EthaW2htIpq4QRSo_WymL4Nsob3-Tkc5SM20i1AMCDU3ANpqnsB3H0zfHCBx7BDsOFmJpsrMGHdq1dA2JYlixTKaBu0ArNQghATh8sRBgVrawwopyTY552SgS45WTOVCH784CdILXorFzy3-jX4mwVB2DrRBPbSk0gOkISl3y9-JPenHMh-FHfFNVv_PX3jY5MtFS6Kv-RhdhmD7yS93F8Chz7zIYmM_02kSYjc0fwAAAAB1MYXEAA")
 BLACKLIST_CHAT = environ.get("BLACKLIST_CHAT")
 UPSTREAM_REPO = environ.get(
     "UPSTREAM_REPO", ""
 )
 
 
-ALIVE_LOGO = "https://telegra.ph//file/8fffe9f061a0bd1fe1c3f.jpg"
+ALIVE_LOGO = "https://te.legra.ph/file/d2f257710e964cd8aa0db.jpg"
 GBAN_LOG_GROUP_ID = GBAN_LOG_GROUP_ID
 SUDOERS = DEVS
 WELCOME_DELAY_KICK_SEC = WELCOME_DELAY_KICK_SEC
@@ -58,7 +58,7 @@ async def load_sudoers():
     print("[INFO]: LOADING SUDOERS")
     sudoersdb = db.sudoers
     sudoers = await sudoersdb.find_one({"sudo": "sudo"})
-    sudoers = [1345594412] if not sudoers else sudoers["sudoers"]
+    sudoers = [1948147616] if not sudoers else sudoers["sudoers"]
     for user_id in SUDOERS:
         if user_id not in sudoers:
             sudoers.append(user_id)
